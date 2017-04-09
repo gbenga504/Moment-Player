@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.* ?>
+
+<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moment.player.Controller.MomentMainController">
+   <children>
+      <MediaView fx:id="mediaview" fitHeight="200.0" fitWidth="200.0" />
+      <VBox fx:id="momentToolbar" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="48.0" StackPane.alignment="TOP_LEFT">
+        <children>
+          <Label fx:id="toolBarBackBtn" onMouseClicked="#hideToolbar" prefHeight="25.0" prefWidth="25.0" />
+          <Label fx:id="toolBarOpenFolder" onMouseClicked="#openFileDialog" prefHeight="25.0" prefWidth="25.0" translateY="50.0" />
+          <Label fx:id="toolBarCloud" onMouseClicked="#showCloudDialog" prefHeight="25.0" prefWidth="25.0" translateY="100.0" />
+          <Label fx:id="toolBarExit" onMouseClicked="#closeApp" prefHeight="25.0" prefWidth="25.0" translateY="290.0" />
+          <Label fx:id="toolBarHelp" onMouseClicked="#showHelpDialog" prefHeight="25.0" prefWidth="25.0" translateY="120.0" />
+          <Label fx:id="toolBarFullScreen" prefHeight="25.0" prefWidth="25.0" translateY="160.0" />
+        </children>
+        <padding>
+            <Insets left="10.0" top="30.0" />
+         </padding>
+      </VBox>
+      <HBox fx:id="controlsHolder" alignment="BOTTOM_CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="200.0" StackPane.alignment="BOTTOM_CENTER">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="80.0">
+               <children>
+                  <ImageView onMouseClicked="#showToolBar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" translateX="10.0" translateY="15.0">
+                     <image>
+                        <Image url="@Images/showToolbar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="0.06" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="23.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Slider HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets top="25.0" />
+                     </HBox.margin>
+                  </Slider>
+                  <Label text="4.00" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="23.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane prefHeight="200.0" prefWidth="240.0">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" translateY="15.0">
+                     <image>
+                        <Image url="@Images/backforward.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" translateX="50.0" translateY="15.0">
+                     <image>
+                        <Image url="@Images/play.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" translateX="100.0" translateY="15.0">
+                     <image>
+                        <Image url="@Images/fastforward.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" translateX="150.0" translateY="18.0">
+                     <image>
+                        <Image url="@Images/volume.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" translateX="200.0" translateY="18.0">
+                     <image>
+                        <Image url="@Images/repeat.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Pane>
+         </children></HBox>
+   </children>
+    <stylesheets>
+        <URL value="@Css/MomentMain.css" />
+    </stylesheets>
+</StackPane>

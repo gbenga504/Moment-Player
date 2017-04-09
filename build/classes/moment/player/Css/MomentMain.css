@@ -1,0 +1,30 @@
+/**
+* Main css file for the Moment Player main Page
+* Author: ANIFOOWSHE GBENGA DAVID 
+*/
+#root{
+    -fx-background-color: black;
+}
+
+#momentToolbar{
+    -fx-background-color: #fafafa;
+}
+
+#controlsHolder{
+    -fx-background-color: #1565c0;
+}
+
+.items .label{
+    -fx-min-height: 25; 
+    -fx-min-width: 25; 
+    -fx-max-width: 25; 
+    -fx-max-height: 25;
+}
+
+.text-area .content{
+    -fx-background-color: blue;
+}
+
+.slider .track{
+    -fx-pref-height: 2;
+}
